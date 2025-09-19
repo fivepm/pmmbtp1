@@ -1,0 +1,7 @@
+.htaccess
+.env
+vendor/
+composer.lock
+uploads/izin_proofs/*
+!uploads/izin_proofs/tempat_bukti_izin.txt
+note.txt
