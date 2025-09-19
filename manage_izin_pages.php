@@ -310,7 +310,7 @@ $conn->close();
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><?php echo date('d M Y', strtotime($event['event_date'])); ?></td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm">
                                             <?php if (!empty($event['izin_page_alias'])): ?>
-                                                <button onclick="copyLink('<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/mumibtp1/izin_request_public.php?alias=' . htmlspecialchars($event['izin_page_alias']); ?>')"
+                                                <button onclick="copyLink('<?php echo 'https://' . $_SERVER['HTTP_HOST'] . '/izin_request_public.php?alias=' . htmlspecialchars($event['izin_page_alias']); ?>')"
                                                     class="inline-flex items-center px-2 py-1 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition duration-200">
                                                     Salin Link
                                                 </button>
