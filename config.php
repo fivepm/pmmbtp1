@@ -29,7 +29,7 @@ function convertDbTimeToWib($dbDateTimeString)
     try {
         // Buat objek DateTime dengan asumsi waktu dari DB adalah UTC (paling aman)
         // Jika server MySQL Anda bukan UTC, Anda perlu menyesuaikan 'UTC' ini
-        $db_timezone = new DateTimeZone('America/New_York'); // Asumsi DB menyimpan dalam UTC
+        $db_timezone = new DateTimeZone('UTC'); // Asumsi DB menyimpan dalam UTC
         $datetime_obj = new DateTime($dbDateTimeString, $db_timezone);
 
         // Atur zona waktu objek ke Asia/Jakarta (WIB)

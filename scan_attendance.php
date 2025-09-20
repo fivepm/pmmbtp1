@@ -602,7 +602,7 @@ $conn->close();
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><?php echo htmlspecialchars($attendance['participant_name']); ?></td>
                                         <!-- <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 font-mono"><?php echo htmlspecialchars($attendance['barcode_data']); ?></td> -->
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            <?php echo $attendance['attendance_time'] ? date('d M Y H:i:s', strtotime($attendance['attendance_time'])) : '-'; ?>
+                                            <?php echo $attendance['attendance_time'] ? convertDbTimeToWib(strtotime($attendance['attendance_time'])) : '-'; ?>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold">
                                             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
