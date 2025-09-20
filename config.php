@@ -26,7 +26,7 @@ function convertDbTimeToWib($dbDateTimeString)
     if (empty($dbDateTimeString) || $dbDateTimeString === '0000-00-00 00:00:00') {
         return '-';
     }
-    if (date('H:i:s', $dbDateTimeString) == '00:00:00') {
+    if (date('H:i:s', strtotime($dbDateTimeString) === '00:00:00')) {
         return $dbDateTimeString;
     }
     try {
