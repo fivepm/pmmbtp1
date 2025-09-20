@@ -1016,7 +1016,7 @@ $conn->close();
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><?php echo htmlspecialchars($row['kelompok']); ?></td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><?php echo htmlspecialchars($row['kategori_usia']); ?></td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                        <?php echo $row['attendance_time'] ? convertDbTimeToWib($row['attendance_time']) : '-'; ?>
+                                                        <?php echo $row['attendance_time'] ? convertDbTimeToWib(strtotime($row['attendance_time'])) : '-'; ?>
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold">
                                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full <?php echo $row['status_kehadiran'] === 'Hadir' ? 'bg-green-100 text-green-800' : ($row['status_kehadiran'] === 'Izin' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'); ?>">
