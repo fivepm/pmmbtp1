@@ -448,7 +448,7 @@ $conn->close();
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><?php echo htmlspecialchars($event['event_name']); ?></td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><?php echo date('d M Y', strtotime($event['event_date'])); ?></td>
                                         <td class="px-6 py-4 text-sm text-gray-700 max-w-xs overflow-hidden text-ellipsis"><?php echo htmlspecialchars($event['description']); ?></td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><?php echo convertDbTimeToWib(strtotime($event['created_at'])); ?></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><?php echo convertDbTimeToWib($event['created_at']); ?></td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium flex space-x-2">
                                             <button onclick="openEditModal(<?php echo htmlspecialchars(json_encode($event)); ?>)"
                                                 class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-200">
