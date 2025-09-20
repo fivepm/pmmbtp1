@@ -700,7 +700,7 @@ $conn->close();
                                         </td>
                                         <td class="px-6 py-4 text-sm text-gray-500">
                                             <?php echo htmlspecialchars($request['processed_by_admin_username'] ?? '-'); ?><br> - <br>
-                                            <?php echo $request['processed_at'] ? date('d M Y H:i', strtotime($request['processed_at'])) : ''; ?>
+                                            <?php echo $request['processed_at'] ? convertDbTimeToWib($request['processed_at']) : ''; ?>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium action-buttons print-hide-column-aksi">
                                             <?php if ($request['status'] === 'Pending'): ?>
