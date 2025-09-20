@@ -26,6 +26,9 @@ function convertDbTimeToWib($dbDateTimeString)
     if (empty($dbDateTimeString) || $dbDateTimeString === '0000-00-00 00:00:00') {
         return '-';
     }
+    if (date('H:i:s', $dbDateTimeString) == '00:00:00') {
+        return $dbDateTimeString;
+    }
     try {
         // Buat objek DateTime dengan asumsi waktu dari DB adalah UTC (paling aman)
         // Jika server MySQL Anda bukan UTC, Anda perlu menyesuaikan 'UTC' ini
