@@ -1265,7 +1265,7 @@ $conn->close();
                                         <td><?php echo htmlspecialchars($row['kelompok']); ?></td>
                                         <td><?php echo htmlspecialchars($row['kategori_usia']); ?></td>
                                         <td style="text-align: center;">
-                                            <?php echo $row['attendance_time'] ? date('d M Y H:i:s', strtotime($row['attendance_time'])) : '-'; ?>
+                                            <?php echo $row['attendance_time'] ? convertDbTimeToWib($row['attendance_time']) : '-'; ?>
                                         </td>
                                         <td style="text-align: center; color: <?php echo $row['status_kehadiran'] === 'Hadir' ? '#28a745' : ($row['status_kehadiran'] === 'Izin' ? '#ffc107' : '#dc3545'); ?>; font-weight: bold;">
                                             <?php echo htmlspecialchars($row['status_kehadiran']); ?>
