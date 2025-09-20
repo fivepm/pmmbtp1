@@ -274,7 +274,7 @@ function getAttendanceSummaryByGroupAndStatus($conn, $event_id)
             a.status as status_kehadiran
         FROM participants p
         LEFT JOIN attendances a ON p.id = a.participant_id AND a.event_id = ?
-        a.attendance_time != '' ";
+        WHERE a.attendance_time != '' ";
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
